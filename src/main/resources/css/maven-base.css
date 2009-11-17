@@ -13,10 +13,6 @@ div.clear{
 div.clear hr{
   display: none;
 }
-#bannerLeft, #bannerRight {
-  font-size: xx-large;
-  font-weight: bold;
-}
 #bannerLeft img, #bannerRight img {
   margin: 0px;
 }
