@@ -234,14 +234,15 @@
       #end
     #end
   </head>
-  <body class="composite">
-    <div id="wrap">
+  <body>
+    <div id="wrap2"><div id="wrap">
     <div id="header">
+      <p id="toplinks">Skip to: <a href="#content">Content</a> | <a href="#sidebar">Navigation</a> | <a href="#footer">Footer</a></p>
+		
       #banner( $decoration.bannerLeft "bannerLeft" )
       #banner( $decoration.bannerRight "bannerRight" )
-      <div class="clear">
-        <hr/>
-      </div>
+      
+      <p id="slogan">${project.description}</p>
     </div>
     <div id="breadcrumbs">
       <div class="xright">#links( $decoration.body.links )</div>
@@ -266,6 +267,6 @@
         <hr/>
       </div>
     </div>
-    </div>
+    </div></div>
   </body>
 </html>
