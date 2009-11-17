@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<project name="Maven2 java.net skin">
+<project name="Maven2 skin of Kohsuke">
   <skin>
-    <groupId>org.jvnet.maven-javanet-skin</groupId>
-    <artifactId>maven-javanet-skin</artifactId>
-    <version>1.0</version>
+    <groupId>org.kohsuke</groupId>
+    <artifactId>maven-skin</artifactId>
+    <version>1.0-SNAPSHOT</version>
   </skin>
   <body>
     <menu>
