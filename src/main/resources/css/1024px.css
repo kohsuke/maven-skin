@@ -4,7 +4,7 @@ For more information, see http://andreasviklund.com/templates/1024px/
 */
 
 /* General tags */
-body {background:url(../images/background.l.gif) repeat-y top left #fff; color:#404040; font:76% Verdana,Tahoma,Arial,sans-serif; line-height:1.3em; margin:0 auto; padding:0;}
+body {background:#fff; color:#404040; font:76% Verdana,Tahoma,Arial,sans-serif; line-height:1.3em; margin:0 auto; padding:0;}
 a {color:#4088b8; font-weight:700; text-decoration:none;}
 a:hover {text-decoration:underline;}
 a img {border:0;}
@@ -21,7 +21,8 @@ h2 {border-bottom:4px solid #dadada; color:#4088b8; font-size:1.4em; letter-spac
 h3 {border-bottom:1px solid #dadada; color:#4088b8; font-size:1.2em; font-weight:700; margin:10px 0 8px; padding:1px 2px 2px 3px;}
 
 /* Main wrap */
-#wrap {color:#404040; padding: 0 135px; background:url(../images/background.r.gif) repeat-y top right; }
+#wrap {color:#404040; padding: 0 150px; background:url(../images/background.r.gif) repeat-y top right; }
+#wrap2 { background:url(../images/background.l.gif) repeat-y top left; }
 #header {margin:0;}
 #toplinks {font-size:0.9em; padding:5px 2px 2px 3px; text-align:right;}
 #toplinks a {color:gray;}
