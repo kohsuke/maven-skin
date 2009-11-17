@@ -2,10 +2,9 @@
 
 #macro ( banner $banner $id )
   #if ( $banner )
+    <h1 id="$id">
     #if( $banner.href )
-      <a href="$banner.href" id="$id">
-    #else
-        <span id="$id">
+      <a href="$banner.href">
     #end
 
     #if( $banner.src )
@@ -26,9 +25,8 @@
 
     #if( $banner.href )
         </a>
-    #else
-        </span>
     #end
+    </h1>
   #end
 #end
 
@@ -127,16 +125,15 @@
 
 #macro ( mainMenu $menus )
   #foreach( $menu in $menus )
-    <dl class=navgroup>
+    <h2>
     #if ( $menu.name )
-    <dt>$menu.name</dt>
+      $menu.name
     #end
-    <dd><ul>
+    </h2><ul>
       #foreach( $item in $menu.items )
         #menuItem( $item )
       #end
-    </ul></dd>
-    </dl>
+    </ul>
   #end
 #end
 
@@ -220,9 +217,9 @@
     <style type="text/css" media="all">
       @import url("$relativePath/css/maven-base.css");
       @import url("$relativePath/css/maven-theme.css");
+      @import url("$relativePath/css/1024px.css");
       @import url("$relativePath/css/site.css");
     </style>
-    <link rel="stylesheet" href="$relativePath/css/print.css" type="text/css" media="print" />
     #foreach( $author in $authors )
       <meta name="author" content="$author" />
     #end
@@ -238,51 +235,37 @@
     #end
   </head>
   <body class="composite">
-    <!-- TODO: move this into JavaScript to patch the skin
-      <div class="xright">#links( $decoration.body.links )</div>
-    -->
-    <div id="leftColumn">
-      <div id="navcolumn">
-       #mainMenu( $decoration.body.menus )
+    <div id="wrap">
+    <div id="header">
+      #banner( $decoration.bannerLeft "bannerLeft" )
+      #banner( $decoration.bannerRight "bannerRight" )
+      <div class="clear">
+        <hr/>
       </div>
-      <script>
-        // replace the java.net project tools with the navigation bar from Maven.
-        // also get rid of "Get Involved" thingie too, while we are at it
-        var pt = document.getElementById("projecttools");
-        var nv = document.getElementById("navcolumn");
-        
-        while(pt.previousSibling!=null)
-          pt.parentNode.removeChild(pt.previousSibling);
-        
-        pt.parentNode.insertBefore(nv,pt);
-        pt.parentNode.removeChild(pt);
-      </script>
-      <script>
-        // kill "description" h3 bar
-        var ld = document.getElementById("longdescription");
-        if(ld!=null) {
-          for( n=ld.firstChild; n!=null; n=n.nextSibling ) {
-            if(n.nodeType==1 && n.innerHTML=="Description" ) {
-              n.parentNode.removeChild(n);
-              break;
-            }
-          }
-        }
-      </script>
     </div>
-    <div id="bodyColumn">
+    <div id="breadcrumbs">
+      <div class="xright">#links( $decoration.body.links )</div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div id="navcolumn">
+        #mainMenu( $decoration.body.menus )
+      </div>
+    </div>
+    <div id="content">
       <div id="contentBox">
         $bodyContent
       </div>
-    </div>
-    <div class="clear">
-      <hr/>
     </div>
     <div id="footer">
       <div class="xright">&#169;#copyright()#publishDate( $decoration.publishDate $decoration.version )</div>
       <div class="clear">
         <hr/>
       </div>
+    </div>
     </div>
   </body>
 </html>
