@@ -3,7 +3,7 @@
   
   <groupId>org.kohsuke</groupId>
   <artifactId>maven-skin</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <name>Maven skin for Kohsuke</name>
   <description>Skin for myself</description>
   
