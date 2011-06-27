@@ -3,15 +3,13 @@
   <skin>
     <groupId>org.kohsuke</groupId>
     <artifactId>maven-skin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1</version>
   </skin>
   <body>
     <menu>
       <item name="Introduction" href="index.html"/>
-      
-      <item name="Mailing lists" href="servlets/ProjectMailingListList"/>
-      <item name="Source code" href="source/browse/maven-javanet-skin/"/>
-      <item name="Issues" href="servlets/ProjectIssues"/>
+      <item name="Download"               href="http://mvnrepository.com/artifact/${project.groupId}/${project.artifactId}"/>
+      <item name="Source code" href="https://github.com/kohsuke/${project.artifactId}"/>
     </menu>
 
     ${reports}

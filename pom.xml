@@ -1,67 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
-  <groupId>org.kohsuke</groupId>
+  <parent>
+    <groupId>org.kohsuke</groupId>
+    <artifactId>pom</artifactId>
+    <version>1-SNAPSHOT</version>
+  </parent>
+
   <artifactId>maven-skin</artifactId>
   <version>1.2-SNAPSHOT</version>
   <name>Maven skin for Kohsuke</name>
   <description>Skin for myself</description>
-  
-  <!--distributionManagement>
-    <site>
-      <id>maven-jvanet-skin-www</id>
-      <url>svn:https://svn.dev.java.net/svn/maven-javanet-skin/trunk/www/</url>
-    </site>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>local-repository</id>
-      <url>svn:https://svn.dev.java.net/svn/maven2-repository/trunk/www/repository/</url>
-    </repository>
-  </distributionManagement-->
-  
-  <!--scm>
-    <connection>scm:svn:https://svn.dev.java.net/svn/maven-javanet-skin/trunk/maven-javanet-skin</connection>
-    <developerConnection>scm:svn:https://svn.dev.java.net/svn/maven-javanet-skin/trunk/maven-javanet-skin</developerConnection>
-    <url>https://maven-javanet-skin.dev.java.net/source/browse/maven-javanet-skin/trunk/maven-javanet-skin/</url>
-  </scm-->
-  
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <dependencies>
-          <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-provider-gitexe</artifactId>
-            <version>1.1</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-    </plugins>
-    <extensions>
-      <extension>
-        <groupId>org.jvnet.wagon-svn</groupId>
-        <artifactId>wagon-svn</artifactId>
-        <version>1.9</version>
-      </extension>
-    </extensions>
-  </build>
-  
-  <distributionManagement>
-    <repository>
-      <id>java.net-m2-repository</id>
-      <url>java-net:/maven2-repository/trunk/repository/</url>
-    </repository>
-    <!--site>
-      <id>kenai</id>
-      <url>dav:https://kenai.com/website/youdebug/</url>
-    </site-->
-  </distributionManagement>
-
-  <scm>
-    <connection>scm:git:git://github.com/kohsuke/maven-kohsuke-skin.git</connection>
-  </scm>
-
-
 </project>
