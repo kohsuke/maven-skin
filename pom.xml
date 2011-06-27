@@ -7,7 +7,7 @@
   </parent>
 
   <artifactId>maven-skin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
   <name>Maven skin for Kohsuke</name>
   <description>Skin for myself</description>
 
