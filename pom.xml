@@ -10,4 +10,10 @@
   <version>1.2-SNAPSHOT</version>
   <name>Maven skin for Kohsuke</name>
   <description>Skin for myself</description>
+
+  <scm>
+    <connection>scm:git:git@github.com/kohsuke/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/kohsuke/${project.artifactId}.git</developerConnection>
+    <url>http://${project.artifactId}.kohsuke.org/</url>
+  </scm>
 </project>
