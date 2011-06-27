@@ -149,6 +149,8 @@
 
     #if ( ${project.organization} && ${project.organization.name} )
       ${project.organization.name}
+    #else
+      <a href="http://kohsuke.org/">Kohsuke Kawaguchi</a> and other contributors
     #end
   #end
 #end
